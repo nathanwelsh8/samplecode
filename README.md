@@ -12,15 +12,16 @@ Task 2:
   display all the names entered. 
 
 Task 3:
-  get the user to enter a series of numbers and store them as a list
-  when the user has finnished entering the numbers get them to enter a search term
+  get the user to enter a series of names and store them as a list
+  when the user has finnished entering the names get them to enter a search term
   tell the user is their search term is in the list.
-  
+
 Task 4:
-  adapt task 3 with words instead of numbers
-  
-task 5: 
-    adapt task 4 so it can search indexes which store multiple words
+  Add validation so that the user cannot submit names with less than 3 characters
+
+Task 5: 
+    since task 4 was a short one. Task 5 will be trickier... 
+    Adapt task 4 so it can search indexes which store multiple words
     e.g searches ['hello word how are you','hello how are we','hello world']
     would search every individual word in all indexes. 
     
