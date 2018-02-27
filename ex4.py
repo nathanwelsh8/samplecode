@@ -35,6 +35,6 @@ for i in range(len( nameArray )):
         # it is messy to show if name not found in array
         # will show you a better way of doing
         # this when we do functions
-        pass
+        pass 
 
     
