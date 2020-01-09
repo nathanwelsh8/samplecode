@@ -1,2 +1,2 @@
 # Samplecode
-## Sort of like a portfolio of things I have been doing at Uni.
+## Work done during the first year of uni
