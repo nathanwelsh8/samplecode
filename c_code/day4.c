@@ -31,7 +31,7 @@ int main(void){
     /* initialise new node*/
     node *head = NULL;
 
-    /* do the memory thing? malloc palloc millok pillock */
+    /* set aside consecutive memory for struct */
     head = (node *)malloc(sizeof(node));
     head->value = 1;
     head->next = NULL;
