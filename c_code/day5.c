@@ -1,13 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// for char array
-#define length(x)(sizeof(x)/sizeof(x[0]))
 #define CHUNKSIZE 1
  
 char *getword(void);
 int isPallendrome(char string[]);
-void printString(char *str);
 int dynamic_string_size(char *string);
 
 
@@ -15,11 +12,12 @@ int main(){
     char *string = NULL;
     string = getword();
 
-    printString(string);
     printf("\nIs pallendrome: %d",isPallendrome(string));
 
     return 0;
 }
+
+/* calculate size of dynamic string O(n)*/
 int dynamic_string_size(char *string){
     int i=0,count=0;
 
@@ -29,6 +27,7 @@ int dynamic_string_size(char *string){
     return count;
 }
 
+/** get string input from user*/
 char *getword(void){
     char *line = NULL;
     char *tmp = NULL;
@@ -60,28 +59,26 @@ char *getword(void){
     return line;
 }
 
-void printString(char *str){
-    
-    int i = 0;
-    printf("\n");
-    while(str[i] != '\0'){
-        printf("%c",str[i]);
-        i++;
-    }
-}
 
+/* determine whether string is a pallendrome O(n/2) */
 int isPallendrome(char *string){
     /**
      * return 1 is string is pallendrome
      * 0 otherwise
      * 
     */
-   printf("\nSize%d", dynamic_string_size(string));
    int pointer_left = 0;
 
    // last char is \0 so ommit this
    int pointer_right = dynamic_string_size(string)-1;
 
+    /*
+        if the string is even len then left and
+        right pointers will swap in the middle
+        and execution stops to return true (1). 
+        If the string is odd len then both pointers
+        reach the middle index and true (1) is returned
+    */
    while(pointer_left<pointer_right){
 
        if(string[pointer_left] != string[pointer_right]){
